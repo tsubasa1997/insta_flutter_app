@@ -16,7 +16,6 @@ class MyPage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(),
     );
   }
 }
