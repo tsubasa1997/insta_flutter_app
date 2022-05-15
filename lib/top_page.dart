@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:insta_flutter_app/my_page.dart';
 import 'package:insta_flutter_app/slide_image.dart';
 
 class TopPage extends StatelessWidget {
@@ -33,7 +34,10 @@ class TopPage extends StatelessWidget {
                       'assets/images/IMG_2570.jpg',
                       width: 50,
                     ),
-                    Text('usr name',style: TextStyle(fontSize: 20),),
+                    Text(
+                      'usr name',
+                      style: TextStyle(fontSize: 20),
+                    ),
                   ],
                 ),
                 SlideImage()
@@ -41,6 +45,26 @@ class TopPage extends StatelessWidget {
             ),
           )
         ],
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Theme.of(context).primaryColor,
+        notchMargin: 6,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8),
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(onPressed: () {}, icon: Icon(Icons.home)),
+              IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+              IconButton(
+                onPressed: () {
+                },
+                icon: Icon(Icons.person),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
